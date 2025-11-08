@@ -35,8 +35,8 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <h1 className="text-2xl md:text-3xl font-serif font-bold tracking-wider">BINNI GOLD</h1>
           <nav className="hidden md:flex gap-8 text-sm font-light tracking-wide">
-            <a href="#collections" className="hover:text-primary transition-colors">Collections</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
+            <a href="#collections" className="hover:text-primary transition-colors">Collections</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </nav>
           <div className="flex gap-4 items-center">
@@ -70,7 +70,7 @@ const Index = () => {
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-light tracking-wider px-8 py-6 text-base"
           >
-            DISCOVER COLLECTION
+            <a href="#collections">DISCOVER COLLECTION</a>
           </Button>
         </div>
       </section>
