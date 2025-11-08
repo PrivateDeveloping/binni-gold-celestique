@@ -12,18 +12,8 @@ export function Header() {
           </h1>
         </Link>
         <nav className="hidden md:flex gap-8 text-sm font-light tracking-wide">
-          <Link to="/rings" className="hover:text-primary transition-colors" data-testid="link-rings">
-            Rings
-          </Link>
-          <Link to="/earrings" className="hover:text-primary transition-colors" data-testid="link-earrings">
-            Earrings
-          </Link>
-          <Link to="/necklaces" className="hover:text-primary transition-colors" data-testid="link-necklaces">
-            Necklaces
-          </Link>
-          <Link to="/bracelets" className="hover:text-primary transition-colors" data-testid="link-bracelets">
-            Bracelets
-          </Link>
+          <a href="/#about" className="hover:text-primary transition-colors">About</a>
+          <a href="/#collections" className="hover:text-primary transition-colors">Collections</a>
           <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
         </nav>
         <div className="flex gap-4 items-center">
