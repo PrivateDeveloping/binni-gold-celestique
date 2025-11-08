@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Instagram, Mail } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import heroImage from "@/assets/hero-hand.jpg";
 import aboutImage from "@/assets/about-model.jpg";
 import ringPearl from "@/assets/ring-pearl.jpg";
@@ -38,8 +39,9 @@ const Index = () => {
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </nav>
-          <div className="flex gap-4">
-            <a href="https://instagram.com/binnigold" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <div className="flex gap-4 items-center">
+            <ThemeToggle />
+            <a href="https://instagram.com/binnigold" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-testid="link-instagram">
               <Instagram className="w-5 h-5 hover:text-primary transition-colors" />
             </a>
           </div>
