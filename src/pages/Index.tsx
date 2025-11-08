@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Instagram, Mail } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Link } from "react-router-dom";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import heroImage from "@/assets/hero-hand.jpg";
 import aboutImage from "@/assets/about-model.jpg";
 import ringPearl from "@/assets/ring-pearl.jpg";
@@ -30,23 +32,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <h1 className="text-2xl md:text-3xl font-serif font-bold tracking-wider">BINNI GOLD</h1>
-          <nav className="hidden md:flex gap-8 text-sm font-light tracking-wide">
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#collections" className="hover:text-primary transition-colors">Collections</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
-          </nav>
-          <div className="flex gap-4 items-center">
-            <ThemeToggle />
-            <a href="https://instagram.com/binnigold" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-testid="link-instagram">
-              <Instagram className="w-5 h-5 hover:text-primary transition-colors" />
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -115,7 +101,7 @@ const Index = () => {
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="group relative overflow-hidden rounded-lg cursor-pointer">
+            <Link to="/rings" className="group relative overflow-hidden rounded-lg cursor-pointer" data-testid="link-collection-rings">
               <img 
                 src={ringPearl} 
                 alt="Rings collection" 
@@ -127,9 +113,9 @@ const Index = () => {
                   <p className="text-primary-foreground/90 text-sm tracking-wider">Explore Collection →</p>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="group relative overflow-hidden rounded-lg cursor-pointer">
+            <Link to="/earrings" className="group relative overflow-hidden rounded-lg cursor-pointer" data-testid="link-collection-earrings">
               <img 
                 src={earringsTwisted} 
                 alt="Earrings collection" 
@@ -141,9 +127,9 @@ const Index = () => {
                   <p className="text-primary-foreground/90 text-sm tracking-wider">Explore Collection →</p>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="group relative overflow-hidden rounded-lg cursor-pointer">
+            <Link to="/necklaces" className="group relative overflow-hidden rounded-lg cursor-pointer" data-testid="link-collection-necklaces">
               <img 
                 src={necklaceChain} 
                 alt="Necklaces collection" 
@@ -155,9 +141,9 @@ const Index = () => {
                   <p className="text-primary-foreground/90 text-sm tracking-wider">Explore Collection →</p>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="group relative overflow-hidden rounded-lg cursor-pointer">
+            <Link to="/bracelets" className="group relative overflow-hidden rounded-lg cursor-pointer" data-testid="link-collection-bracelets">
               <img 
                 src={braceletsStack} 
                 alt="Bracelets collection" 
@@ -169,7 +155,7 @@ const Index = () => {
                   <p className="text-primary-foreground/90 text-sm tracking-wider">Explore Collection →</p>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -230,41 +216,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-6 border-t border-border">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div>
-              <h4 className="font-serif text-2xl font-bold tracking-wider mb-2">BINNI GOLD</h4>
-              <p className="text-sm text-muted-foreground">Timeless Elegance Since 2024</p>
-            </div>
-            
-            <div className="flex gap-8">
-              <div>
-                <h5 className="font-semibold mb-3 text-sm tracking-wider">QUICK LINKS</h5>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li><a href="#collections" className="hover:text-primary transition-colors">Collections</a></li>
-                  <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-                  <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h5 className="font-semibold mb-3 text-sm tracking-wider">CONNECT</h5>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li><a href="https://instagram.com/binnigold" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a></li>
-                  <li><a href="mailto:hello@binnigold.com" className="hover:text-primary transition-colors">Email</a></li>
-                  <li><a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2024 Binni Gold. All rights reserved. Crafted with excellence.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
