@@ -106,11 +106,20 @@ All colors MUST be HSL.
 
   html {
     scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: 'Montserrat', sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  #root {
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {

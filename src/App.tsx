@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { BackToTopButton } from "@/components/BackToTopButton";
 import Index from "./pages/Index";
 import Rings from "./pages/Rings";
 import Earrings from "./pages/Earrings";
@@ -22,6 +23,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <BackToTopButton />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/rings" element={<Rings />} />
