@@ -9,20 +9,22 @@ import product6 from "@/assets/product-6.jpg";
 import product7 from "@/assets/product-7.jpg";
 import product8 from "@/assets/product-8.jpg";
 import necklaceChain from "@/assets/necklace-chain.jpg";
+import { useTranslation } from "react-i18next";
 
 const Necklaces = () => {
+  const { t } = useTranslation();
   const necklaces = [
-    { name: "Delicate Chain", price: "$340", image: product2, label: "14K GOLD" },
-    { name: "Crystal Pendant", price: "$495", image: product3, label: "14K GOLD" },
-    { name: "Layered Pearl", price: "$520", image: product7, label: "14K GOLD" },
-    { name: "Classic Chain", price: "$285", image: necklaceChain, label: "14K GOLD" },
-    { name: "Bar Necklace", price: "$225", image: product1, label: "14K GOLD" },
-    { name: "Statement Piece", price: "$625", image: product5, label: "14K GOLD" },
-    { name: "Infinity Design", price: "$395", image: product4, label: "14K GOLD" },
-    { name: "Lariat Style", price: "$445", image: product6, label: "14K GOLD" },
-    { name: "Choker Elegance", price: "$375", image: product8, label: "14K GOLD" },
-    { name: "Y-Necklace", price: "$485", image: product2, label: "14K GOLD" },
-  ];
+    { name: "Delicate Chain", price: "$340", image: product2 },
+    { name: "Crystal Pendant", price: "$495", image: product3 },
+    { name: "Layered Pearl", price: "$520", image: product7 },
+    { name: "Classic Chain", price: "$285", image: necklaceChain },
+    { name: "Bar Necklace", price: "$225", image: product1 },
+    { name: "Statement Piece", price: "$625", image: product5 },
+    { name: "Infinity Design", price: "$395", image: product4 },
+    { name: "Lariat Style", price: "$445", image: product6 },
+    { name: "Choker Elegance", price: "$375", image: product8 },
+    { name: "Y-Necklace", price: "$485", image: product2 },
+  ].map((necklace) => ({ ...necklace, labelKey: "common.goldLabel" }));
 
   return (
     <div className="min-h-screen">
@@ -41,10 +43,10 @@ const Necklaces = () => {
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <h2 className="font-serif text-6xl md:text-8xl font-light mb-6 tracking-wide">
-            NECKLACES
+            {t("collectionPages.necklaces.title")}
           </h2>
           <p className="text-xl md:text-2xl font-light tracking-wider">
-            Adorn your elegance with golden grace
+            {t("collectionPages.necklaces.subtitle")}
           </p>
         </div>
       </section>
@@ -62,7 +64,7 @@ const Necklaces = () => {
                     className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute top-3 right-3 bg-background/90 px-3 py-1 rounded-full text-xs tracking-wider">
-                    {product.label}
+                    {t(product.labelKey)}
                   </div>
                 </div>
                 <h4 className="font-serif text-lg mb-1">{product.name}</h4>
