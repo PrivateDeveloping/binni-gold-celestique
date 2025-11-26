@@ -4,6 +4,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "./LanguageToggle";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
+import logo from "../assets/bini-gold.png";
 
 export function Header() {
   const { t } = useTranslation();
@@ -12,22 +13,22 @@ export function Header() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
-useEffect(() => {
-  const html = document.documentElement;
-  const body = document.body;
+  useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
 
-  if (isMenuOpen) {
-    html.style.overflow = "hidden";
-    body.style.overflow = "hidden";
-    html.style.touchAction = "none";
-    body.style.touchAction = "none";
-  } else {
-    html.style.overflow = "";
-    body.style.overflow = "";
-    html.style.touchAction = "";
-    body.style.touchAction = "";
-  }
-}, [isMenuOpen]);
+    if (isMenuOpen) {
+      html.style.overflow = "hidden";
+      body.style.overflow = "hidden";
+      html.style.touchAction = "none";
+      body.style.touchAction = "none";
+    } else {
+      html.style.overflow = "";
+      body.style.overflow = "";
+      html.style.touchAction = "";
+      body.style.touchAction = "";
+    }
+  }, [isMenuOpen]);
 
 
 
@@ -43,9 +44,12 @@ useEffect(() => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
         <Link to="/" data-testid="link-home">
-          <h1 className="text-2xl md:text-3xl font-serif font-bold tracking-wider hover:text-primary transition-colors">
-            {t("common.brand")}
-          </h1>
+          <div className="flex items-center gap-3 hover:text-primary transition-colors">
+            <img src={logo} alt="Binni Gold logo" className="h-10 w-auto" />
+            <h1 className="text-2xl md:text-3xl font-serif font-bold tracking-wider">
+              {t("common.brand")}
+            </h1>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

@@ -18,6 +18,13 @@ interface ProductModalProps {
 export function ProductModal({ open, onClose, product, t }: ProductModalProps) {
   if (!product) return null;
 
+  const whatsappNumber = "38345333222";
+  const pageUrl = typeof window !== "undefined" ? window.location.href : "";
+  const whatsappText = encodeURIComponent(
+    `Hi, I'm interested in "${product.name}".\n${pageUrl}`
+  );
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
+
   const detailItems = [
     { label: "Material", value: "14K Solid Gold" },
     { label: "Finish", value: "Mirror Polished" },
@@ -105,7 +112,7 @@ export function ProductModal({ open, onClose, product, t }: ProductModalProps) {
             {/* Contact */}
             <div className="space-y-1 text-center">
               <a
-                href="https://wa.me/38344123456"
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary/90 px-5 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-primary-foreground transition hover:bg-primary"

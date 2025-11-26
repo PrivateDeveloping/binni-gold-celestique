@@ -126,3 +126,39 @@ All colors MUST be HSL.
     font-family: 'Cormorant Garamond', serif;
   }
 }
+.shine-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.shine-effect::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.9) 50%,
+    transparent 100%
+  );
+  
+  /* IMPORTANT: mask the shine using the PNG transparency */
+  mask-image: url("/mnt/data/logo-bini-homepage.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  -webkit-mask-image: url("/mnt/data/logo-bini-homepage.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  transform: skewX(-20deg);
+  animation: shine 2.8s infinite linear;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  50% { transform: translateX(150%) skewX(-20deg); }
+  100% { transform: translateX(150%) skewX(-20deg); }
+}

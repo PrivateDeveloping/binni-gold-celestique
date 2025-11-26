@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import heroImage from "@/assets/hero-hand.jpg";
 import aboutImage from "@/assets/about-model.jpg";
+import logo from "@/assets/logo-bini-homepage.png";
 import ringPearl from "@/assets/ring-pearl.jpg";
 import earringsTwisted from "@/assets/earrings-twisted.jpg";
 import necklaceChain from "@/assets/necklace-chain.jpg";
@@ -56,7 +57,14 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60"></div>
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+          <div className="absolute left-1/2 -translate-x-1/2 -top-24">
+            <img
+              src={logo}
+              alt="Binni Gold logo"
+              className="w-32 md:w-40 drop-shadow-xl animate-fade-in"
+            />
+          </div>
           <h2 className="font-serif text-6xl md:text-8xl font-light mb-6 tracking-wide animate-fade-in">
             {t("home.hero.title")}
           </h2>
