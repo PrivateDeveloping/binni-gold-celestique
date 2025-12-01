@@ -1,10 +1,42 @@
 [
-  { "slug": "eternal-band", "name": "Eternal Band", "image": "product-1.jpg" },
-  { "slug": "luna-gold-ring", "name": "Luna Gold Ring", "image": "product-5.jpg" },
-  { "slug": "pearl-solitaire", "name": "Pearl Solitaire", "image": "ring-pearl.jpg" },
-  { "slug": "stackable-set", "name": "Stackable Set", "image": "product-6.jpg" },
-  { "slug": "vintage-rose", "name": "Vintage Rose", "image": "product-4.jpg" },
-  { "slug": "minimalist-band", "name": "Minimalist Band", "image": "product-7.jpg" },
-  { "slug": "crown-setting", "name": "Crown Setting", "image": "product-8.jpg" },
-  { "slug": "infinity-band", "name": "Infinity Band", "image": "product-1.jpg" }
+  {
+    "slug": "eternal-band",
+    "name": "Eternal Band",
+    "image": "product-1.jpg"
+  },
+  {
+    "slug": "luna-gold-ring",
+    "name": "Luna Gold Ring",
+    "image": "product-5.jpg"
+  },
+  {
+    "slug": "pearl-solitaire",
+    "name": "Pearl Solitaire",
+    "image": "ring-pearl.jpg"
+  },
+  {
+    "slug": "stackable-set",
+    "name": "Stackable Set",
+    "image": "product-6.jpg"
+  },
+  {
+    "slug": "vintage-rose",
+    "name": "Vintage Rose",
+    "image": "product-4.jpg"
+  },
+  {
+    "slug": "minimalist-band",
+    "name": "Minimalist Band",
+    "image": "product-7.jpg"
+  },
+  {
+    "slug": "crown-setting",
+    "name": "Crown Setting",
+    "image": "product-8.jpg"
+  },
+  {
+    "slug": "infinity-band",
+    "name": "Infinity Band",
+    "image": "product-1.jpg"
+  }
 ]
