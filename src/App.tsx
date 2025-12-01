@@ -7,10 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { BackToTopButton } from "@/components/BackToTopButton";
 import Index from "./pages/Index";
-import Rings from "./pages/Rings";
-import Earrings from "./pages/Earrings";
-import Necklaces from "./pages/Necklaces";
-import Bracelets from "./pages/Bracelets";
+import CollectionPage from "./pages/CollectionPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,10 +23,7 @@ const App = () => (
           <BackToTopButton />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/rings" element={<Rings />} />
-            <Route path="/earrings" element={<Earrings />} />
-            <Route path="/necklaces" element={<Necklaces />} />
-            <Route path="/bracelets" element={<Bracelets />} />
+            <Route path="/:collection" element={<CollectionPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

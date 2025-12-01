@@ -20,6 +20,26 @@ const resources = {
         collections: "Collections",
         contact: "Contact",
       },
+      productModal: {
+        signature: "Signature collection",
+        priceOnRequest: "Price on request",
+        description: "Handcrafted with 14K gold for timeless elegance. A refined creation designed to elevate your unique style.",
+        details: {
+          material: { label: "Material", value: "14K Solid Gold" },
+          finish: { label: "Finish", value: "Mirror Polished" },
+          crafting: { label: "Crafting", value: "Handmade in Pristina" },
+          delivery: { label: "Delivery", value: "Ready in 4-6 weeks" },
+        },
+        highlights: {
+          item1: "Ethically sourced gold with lifetime care.",
+          item2: "Custom sizing consultation with our atelier.",
+          item3: "Complimentary engraving for personal stories.",
+        },
+        highlightsTitle: "Highlights",
+        contactCta: "Contact us on WhatsApp",
+        contactVisit: "or even better, come give us a visit",
+        whatsappMessage: "Hi, I'm interested in \"{{name}}\".\nPhoto: {{image}}\nLink: {{url}}",
+      },
       home: {
         hero: {
           title: "BINNI GOLD",
@@ -57,16 +77,24 @@ const resources = {
           subtitle: "Timeless symbols of elegance and commitment",
         },
         earrings: {
+          catalogTitle:"Discover Our Earrings Collection",
           title: "EARRINGS",
           subtitle: "Frame your face with timeless beauty",
         },
         necklaces: {
+          catalogTitle:"Discover Our Necklaces Collection",
           title: "NECKLACES",
           subtitle: "Adorn your elegance with golden grace",
         },
         bracelets: {
+          catalogTitle:"Discover Our Braclets Collection",
           title: "BRACELETS",
           subtitle: "Wrap your wrist in golden luxury",
+        },
+        invitation: {
+          title: "Some designs deserve to be seen in person. We welcome you to our store.",
+          body: "Experience the craftsmanship up close and let our team guide you to the perfect piece.",
+          cta: "Visit our store",
         },
       },
       footer: {
@@ -99,6 +127,26 @@ const resources = {
         about: "Rreth nesh",
         collections: "Koleksionet",
         contact: "Kontakti",
+      },
+      productModal: {
+        signature: "Koleksion nënshkrimi",
+        priceOnRequest: "Kontaktoni per Çmimin",
+        description: "Punuar me dorë nga ari 14K për elegancë të përjetshme. Një krijim i rafinuar për të ngritur stilin tënd unik.",
+        details: {
+          material: { label: "Materiali", value: "Ari i pastër 14K" },
+          finish: { label: "Përfundimi", value: "Përfundim pasqyre" },
+          crafting: { label: "Punuar", value: "Punuar me dorë në Prishtinë" },
+          delivery: { label: "Dërgesa", value: "Gati për 4-6 javë" },
+        },
+        highlights: {
+          item1: "Ari me burim etik dhe përkujdesje të përjetshme.",
+          item2: "Konsultim për masa të personalizuara në atelierin tonë.",
+          item3: "Gravim komplementar për histori personale.",
+        },
+        highlightsTitle: "Pikat kryesore",
+        contactCta: "Na kontakto në WhatsApp",
+        contactVisit: "ose edhe më mirë, ejani për vizitë",
+        whatsappMessage: "Pershendetje, jam i/e interesuar për \"{{name}}\".\nFoto: {{image}}\nLinku: {{url}}",
       },
       home: {
         hero: {
@@ -137,16 +185,24 @@ const resources = {
           subtitle: "Simbol i përjetshëm i elegancës dhe përkushtimit",
         },
         earrings: {
+          catalogTitle:"Zbuloni Koleksionin e Vathëve",
           title: "VATHË",
           subtitle: "Thekso fytyrën me bukuri të përjetshme",
         },
         necklaces: {
+          catalogTitle:"Zbuloni Koleksionin e Varëseve",
           title: "VARËSE",
           subtitle: "Stolis elegancën tënde me shkëlqim të artë",
         },
         bracelets: {
+          catalogTitle:"Zbuloni Koleksionin e Byzylykëve",
           title: "BYZYLYKË",
           subtitle: "Mbështjelle kyçin me luksozitet të artë",
+        },
+        invitation: {
+          title: "Disa dizajne duhen parë nga afër. Jemi të lumtur t'ju presim në lokal.",
+          body: "Përjetoni mjeshtërinë nga afër dhe lejoni ekipin tonë t'ju udhëheqë drejt pjesës së përsosur.",
+          cta: "Vizitoni lokalin tonë",
         },
       },
       footer: {

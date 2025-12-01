@@ -19,23 +19,29 @@ export function ProductModal({ open, onClose, product, t }: ProductModalProps) {
   if (!product) return null;
 
   const whatsappNumber = "38345333222";
-  const pageUrl = typeof window !== "undefined" ? window.location.href : "";
+  const productUrl = typeof window !== "undefined" ? window.location.href : "";
+  const productImageUrl =
+    product.image.startsWith("http") || product.image.startsWith("//")
+      ? product.image
+      : typeof window !== "undefined"
+        ? new URL(product.image, window.location.origin).href
+        : product.image;
   const whatsappText = encodeURIComponent(
-    `Hi, I'm interested in "${product.name}".\n${pageUrl}`
+    t("productModal.whatsappMessage", { name: product.name, image: productImageUrl, url: productUrl })
   );
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappText}`;
 
   const detailItems = [
-    { label: "Material", value: "14K Solid Gold" },
-    { label: "Finish", value: "Mirror Polished" },
-    { label: "Crafting", value: "Handmade in Pristina" },
-    { label: "Delivery", value: "Ready in 4-6 weeks" },
+    { label: t("productModal.details.material.label"), value: t("productModal.details.material.value") },
+    { label: t("productModal.details.finish.label"), value: t("productModal.details.finish.value") },
+    { label: t("productModal.details.crafting.label"), value: t("productModal.details.crafting.value") },
+    { label: t("productModal.details.delivery.label"), value: t("productModal.details.delivery.value") },
   ];
 
   const highlightItems = [
-    "Ethically sourced gold with lifetime care.",
-    "Custom sizing consultation with our atelier.",
-    "Complimentary engraving for personal stories.",
+    t("productModal.highlights.item1"),
+    t("productModal.highlights.item2"),
+    t("productModal.highlights.item3"),
   ];
 
   return (
@@ -52,7 +58,7 @@ export function ProductModal({ open, onClose, product, t }: ProductModalProps) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white">
               <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-                Signature collection
+                {t("productModal.signature")}
               </p>
               <p className="mt-2 text-3xl font-serif font-light">{product.name}</p>
             </div>
@@ -66,13 +72,12 @@ export function ProductModal({ open, onClose, product, t }: ProductModalProps) {
                   {product.name}
                 </DialogTitle>
                 <span className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-muted-foreground">
-                  Price on request
+                  {t("productModal.priceOnRequest")}
                 </span>
               </div>
 
               <DialogDescription className="text-sm leading-relaxed text-muted-foreground">
-                Handcrafted with 14K gold for timeless elegance. A refined
-                creation designed to elevate your unique style.
+                {t("productModal.description")}
               </DialogDescription>
             </div>
 
@@ -94,7 +99,7 @@ export function ProductModal({ open, onClose, product, t }: ProductModalProps) {
             {/* Highlights */}
             <div className="space-y-2">
               <p className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-muted-foreground">
-                Highlights
+                {t("productModal.highlightsTitle")}
               </p>
               <ul className="space-y-1 text-xs text-foreground/90">
                 {highlightItems.map((highlight) => (
@@ -117,10 +122,10 @@ export function ProductModal({ open, onClose, product, t }: ProductModalProps) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary/90 px-5 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-primary-foreground transition hover:bg-primary"
               >
-                Contact us on WhatsApp
+                {t("productModal.contactCta")}
               </a>
               <p className="text-[0.6rem] uppercase tracking-[0.45em] text-muted-foreground">
-                or even better, come give us a visit
+                {t("productModal.contactVisit")}
               </p>
             </div>
           </div>
