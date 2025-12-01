@@ -33,5 +33,10 @@
     "slug": "crown-setting",
     "name": "Crown Setting",
     "image": "product-8.jpg"
+  },
+  {
+    "slug": "infinity-band",
+    "name": "Infinity Band",
+    "image": "product-1.jpg"
   }
 ]
