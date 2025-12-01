@@ -200,9 +200,9 @@ const resources = {
           subtitle: "Mbështjelle kyçin me luksozitet të artë",
         },
         invitation: {
-          title: "Disa dizajne duhen parë nga afër. Jemi të lumtur t'ju presim në lokal.",
+          title: "Disa dizajne duhen parë nga afër. Jemi të lumtur t'ju presim në dyqan.",
           body: "Përjetoni mjeshtërinë nga afër dhe lejoni ekipin tonë t'ju udhëheqë drejt pjesës së përsosur.",
-          cta: "Vizitoni lokalin tonë",
+          cta: "Vizitoni dyqanin tonë",
         },
       },
       footer: {
