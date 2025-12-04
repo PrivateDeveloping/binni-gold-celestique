@@ -2,31 +2,37 @@
   {
     "slug": "eternal-band",
     "name": "Eternal Band",
-    "image": "product-1.jpg"
+    "image": "product-1.jpg",
+    "active": true
   },
   {
     "slug": "luna-gold-ring",
     "name": "Luna Gold Ring",
-    "image": "product-5.jpg"
+    "image": "product-5.jpg",
+    "active": true
   },
   {
     "slug": "pearl-solitaire",
     "name": "Pearl Solitaire",
-    "image": "ring-pearl.jpg"
+    "image": "ring-pearl.jpg",
+    "active": true
   },
   {
     "slug": "stackable-set",
     "name": "Stackable Set",
-    "image": "product-6.jpg"
+    "image": "product-6.jpg",
+    "active": true
   },
   {
     "slug": "vintage-rose",
     "name": "Vintage Rose",
-    "image": "product-4.jpg"
+    "image": "product-4.jpg",
+    "active": true
   },
   {
     "slug": "minimalist-band",
     "name": "Minimalist Band",
-    "image": "product-7.jpg"
+    "image": "product-7.jpg",
+    "active": true
   }
 ]

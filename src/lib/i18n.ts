@@ -12,6 +12,7 @@ const resources = {
         learnMore: "Learn More",
         followInstagram: "Follow on Instagram",
         emailUs: "Email Us",
+        contactWhatsapp: "Contact us on WhatsApp",
         getDirections: "Get Directions",
         viewDetails: "View Details"
       },
@@ -120,6 +121,7 @@ const resources = {
         learnMore: "Mëso Më Shumë",
         followInstagram: "Na ndiq në Instagram",
         emailUs: "Na dërgo email",
+        contactWhatsapp: "Na kontakto në WhatsApp",
         getDirections: "Merr udhëzimet",
         viewDetails:"Shiko Detajet"
       },

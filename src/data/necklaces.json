@@ -1,10 +1,10 @@
 [
-  { "slug": "delicate-chain", "name": "Delicate Chain","image": "product-2.jpg" },
-  { "slug": "crystal-pendant", "name": "Crystal Pendant","image": "product-3.jpg" },
-  { "slug": "layered-pearl", "name": "Layered Pearl","image": "product-7.jpg" },
-  { "slug": "classic-chain", "name": "Classic Chain","image": "necklace-chain.jpg" },
-  { "slug": "statement-piece", "name": "Statement Piece", "image": "product-5.jpg" },
-  { "slug": "infinity-design", "name": "Infinity Design", "image": "product-4.jpg" },
-  { "slug": "choker-elegance", "name": "Choker Elegance","image": "product-8.jpg" },
-  { "slug": "y-necklace", "name": "Y-Necklace", "image": "product-2.jpg" }
+  { "slug": "delicate-chain", "name": "Delicate Chain","image": "product-2.jpg", "active": true },
+  { "slug": "crystal-pendant", "name": "Crystal Pendant","image": "product-3.jpg", "active": true },
+  { "slug": "layered-pearl", "name": "Layered Pearl","image": "product-7.jpg", "active": true },
+  { "slug": "classic-chain", "name": "Classic Chain","image": "necklace-chain.jpg", "active": true },
+  { "slug": "statement-piece", "name": "Statement Piece", "image": "product-5.jpg", "active": true },
+  { "slug": "infinity-design", "name": "Infinity Design", "image": "product-4.jpg", "active": true },
+  { "slug": "choker-elegance", "name": "Choker Elegance","image": "product-8.jpg", "active": true },
+  { "slug": "y-necklace", "name": "Y-Necklace", "image": "product-2.jpg", "active": true }
 ]

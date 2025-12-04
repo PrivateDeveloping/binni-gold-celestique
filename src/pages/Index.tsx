@@ -1,10 +1,11 @@
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import heroImage from "@/assets/hero-hand.jpg";
-import aboutImage from "@/assets/about-model.jpg";
+import aboutImage from "@/assets/imageherosection1.jpg";
 import logo from "@/assets/logo-bini-homepage.png";
 import ringPearl from "@/assets/ring-pearl.jpg";
 import earringsTwisted from "@/assets/earrings-twisted.jpg";
@@ -18,17 +19,24 @@ import product5 from "@/assets/product-5.jpg";
 import product6 from "@/assets/product-6.jpg";
 import product7 from "@/assets/product-7.jpg";
 import product8 from "@/assets/product-8.jpg";
+import { ProductModal } from "@/components/ProductModal";
 import { useTranslation } from "react-i18next";
 
-const productData = [
-  { name: "Eternal Band", price: "$285", image: product1 },
-  { name: "Delicate Chain", price: "$340", image: product2 },
-  { name: "Crystal Pendant", price: "$495", image: product3 },
-  { name: "Pearl Drops", price: "$425", image: product4 },
-  { name: "Luna Gold Ring", price: "$315", image: product5 },
-  { name: "Classic Hoops", price: "$275", image: product6 },
-  { name: "Layered Pearl", price: "$520", image: product7 },
-  { name: "Twisted Bangle", price: "$385", image: product8 },
+type Product = {
+  name: string;
+  image: string;
+  labelKey: string;
+};
+
+const productData: Array<Omit<Product, "labelKey">> = [
+  { name: "Eternal Band", image: product1 },
+  { name: "Delicate Chain", image: product2 },
+  { name: "Crystal Pendant", image: product3 },
+  { name: "Pearl Drops", image: product4 },
+  { name: "Luna Gold Ring", image: product5 },
+  { name: "Classic Hoops", image: product6 },
+  { name: "Layered Pearl", image: product7 },
+  { name: "Twisted Bangle", image: product8 },
 ];
 
 const collectionCards = [
@@ -40,7 +48,50 @@ const collectionCards = [
 
 const Index = () => {
   const { t } = useTranslation();
-  const products = productData.map((product) => ({ ...product, labelKey: "common.goldLabel" }));
+  const products: Product[] = productData.map((product) => ({ ...product, labelKey: "common.goldLabel" }));
+  const [aboutVisible, setAboutVisible] = useState(false);
+  const [collectionsVisible, setCollectionsVisible] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const aboutRef = useRef<HTMLElement | null>(null);
+  const collectionsRef = useRef<HTMLElement | null>(null);
+  const INSTAGRAM_URL = "https://instagram.com/binnigold";
+  const WHATSAPP_URL = "https://wa.me/1234567890";
+
+  useEffect(() => {
+    const target = aboutRef.current;
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAboutVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const target = collectionsRef.current;
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setCollectionsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div >
@@ -81,10 +132,14 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6">
+      <section id="about" className="py-24 px-6" ref={aboutRef}>
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
+            <div
+              className={`space-y-6 transition-all duration-700 ${
+                aboutVisible ? "animate-slide-in-left opacity-100" : "opacity-0"
+              }`}
+            >
               <h3 className="font-serif text-6xl md:text-7xl font-light tracking-wide leading-tight whitespace-pre-line">
                 {t("home.about.heading")}
               </h3>
@@ -97,11 +152,12 @@ const Index = () => {
               <p className="text-lg leading-relaxed text-muted-foreground">
                 {t("home.about.body3")}
               </p>
-              <Button variant="outline" size="lg" className="mt-4">
-                {t("common.learnMore")}
-              </Button>
             </div>
-            <div className="relative">
+            <div
+              className={`relative transition-all duration-700 ${
+                aboutVisible ? "animate-slide-in-right opacity-100" : "opacity-0"
+              }`}
+            >
               <img
                 src={aboutImage}
                 alt="Model wearing elegant jewelry"
@@ -113,18 +169,21 @@ const Index = () => {
       </section>
 
       {/* Collections Section */}
-      <section id="collections" className="py-24 px-6 bg-muted/30">
+      <section id="collections" className="py-24 px-6 bg-muted/30" ref={collectionsRef}>
         <div className="container mx-auto max-w-6xl">
           <h3 className="font-serif text-4xl sm:text-5xl md:text-7xl font-light tracking-normal md:tracking-wide leading-tight text-center mb-16 px-2">
             {t("home.collections.heading")}
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {collectionCards.map((card) => (
+            {collectionCards.map((card, index) => (
               <Link
                 key={card.key}
                 to={card.link}
-                className="group relative overflow-hidden rounded-lg cursor-pointer"
+                className={`group relative overflow-hidden rounded-lg cursor-pointer transition-all duration-700 ease-out ${
+                  collectionsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+                }`}
+                style={{ transitionDelay: `${index * 450}ms` }}
                 data-testid={card.testId}
               >
                 <img
@@ -155,7 +214,11 @@ const Index = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {products.map((product, index) => (
-              <div key={product.name + index} className="group cursor-pointer">
+              <div
+                key={product.name + index}
+                className="group cursor-pointer"
+                onClick={() => setSelectedProduct(product)}
+              >
                 <div className="relative overflow-hidden rounded-lg mb-4 bg-muted">
                   <img
                     src={product.image}
@@ -167,7 +230,6 @@ const Index = () => {
                   </div>
                 </div>
                 <h4 className="font-serif text-lg mb-1">{product.name}</h4>
-                <p className="text-sm text-muted-foreground font-semibold">{product.price}</p>
               </div>
             ))}
           </div>
@@ -187,18 +249,24 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
+                  asChild
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
-                  <Instagram className="mr-2 h-5 w-5" />
-                  {t("common.followInstagram")}
+                  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+                    <Instagram className="mr-2 h-5 w-5" />
+                    {t("common.followInstagram")}
+                  </a>
                 </Button>
                 <Button
+                  asChild
                   size="lg"
                   variant="outline"
                 >
-                  <Mail className="mr-2 h-5 w-5" />
-                  {t("common.emailUs")}
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    {t("common.contactWhatsapp")}
+                  </a>
                 </Button>
               </div>
             </div>
@@ -227,6 +295,13 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <ProductModal
+        open={selectedProduct !== null}
+        onClose={() => setSelectedProduct(null)}
+        product={selectedProduct}
+        t={t}
+      />
 
       <Footer />
     </div>

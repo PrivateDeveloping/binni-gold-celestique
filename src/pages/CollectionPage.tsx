@@ -13,6 +13,7 @@ type Product = {
   image: string;
   price?: string;
   labelKey?: string;
+  active?: boolean;
 };
 
 const imageModules = import.meta.glob<{ default: string }>("../assets/*", { eager: true });
@@ -49,7 +50,13 @@ const CollectionPage = () => {
       .then((module) => {
         if (!isMounted) return;
         const items = module.default ?? [];
-        setProducts(items.map((product) => ({ ...product, image: resolveImage(product.image) })));
+        setProducts(
+          items.map((product) => ({
+            ...product,
+            image: resolveImage(product.image),
+            active: product.active ?? true,
+          }))
+        );
       })
       .catch(() => {
         if (!isMounted) return;
@@ -66,7 +73,8 @@ const CollectionPage = () => {
 
     const slugFromUrl = searchParams.get("product");
     if (slugFromUrl) {
-      const match = products.find((item) => item.slug === slugFromUrl);
+      const activeProducts = products.filter((item) => item.active !== false);
+      const match = activeProducts.find((item) => item.slug === slugFromUrl);
       setSelectedProduct(match ?? null);
     } else {
       setSelectedProduct(null);
@@ -91,7 +99,8 @@ const CollectionPage = () => {
     return null;
   }
 
-  const heroImage = resolveImage(heroImageMap[normalizedCollection] ?? products[0]?.image ?? "");
+  const activeProducts = products.filter((item) => item.active !== false);
+  const heroImage = resolveImage(heroImageMap[normalizedCollection] ?? activeProducts[0]?.image ?? products[0]?.image ?? "");
 
   return (
     <div className="min-h-screen">
@@ -126,7 +135,7 @@ const CollectionPage = () => {
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-2.5 gap-y-10 sm:gap-x-4 md:gap-10">
-            {products.map((product) => (
+            {activeProducts.map((product) => (
               <div key={product.slug} className="group cursor-pointer">
                 <div
                   className="relative overflow-hidden rounded-xl shadow-md bg-muted"

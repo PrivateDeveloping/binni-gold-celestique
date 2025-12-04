@@ -1,10 +1,10 @@
 [
-  { "slug": "twisted-bangle", "name": "Twisted Bangle", "image": "product-8.jpg" },
-  { "slug": "bracelet-stack", "name": "Bracelet Stack", "image": "bracelets-stack.jpg" },
-  { "slug": "chain-bracelet", "name": "Chain Bracelet", "image": "product-1.jpg" },
-  { "slug": "cuff-statement", "name": "Cuff Statement", "image": "product-5.jpg" },
-  { "slug": "tennis-bracelet", "name": "Tennis Bracelet", "image": "product-2.jpg" },
-  { "slug": "charm-bracelet", "name": "Charm Bracelet", "image": "product-3.jpg" },
-  { "slug": "link-chain", "name": "Link Chain",  "image": "product-6.jpg" },
-  { "slug": "bangle-set", "name": "Bangle Set",  "image": "product-4.jpg" }
+  { "slug": "twisted-bangle", "name": "Twisted Bangle", "image": "product-8.jpg", "active": true },
+  { "slug": "bracelet-stack", "name": "Bracelet Stack", "image": "bracelets-stack.jpg", "active": true },
+  { "slug": "chain-bracelet", "name": "Chain Bracelet", "image": "product-1.jpg", "active": true },
+  { "slug": "cuff-statement", "name": "Cuff Statement", "image": "product-5.jpg", "active": true },
+  { "slug": "tennis-bracelet", "name": "Tennis Bracelet", "image": "product-2.jpg", "active": true },
+  { "slug": "charm-bracelet", "name": "Charm Bracelet", "image": "product-3.jpg", "active": true },
+  { "slug": "link-chain", "name": "Link Chain",  "image": "product-6.jpg", "active": true },
+  { "slug": "bangle-set", "name": "Bangle Set",  "image": "product-4.jpg", "active": true }
 ]

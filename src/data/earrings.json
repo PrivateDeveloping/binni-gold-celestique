@@ -1,10 +1,10 @@
 [
-  { "slug": "pearl-drops", "name": "Pearl Drops", "image": "product-4.jpg" },
-  { "slug": "classic-hoops", "name": "Classic Hoops","image": "product-6.jpg" },
-  { "slug": "twisted-hoops", "name": "Twisted Hoops","image": "earrings-twisted.jpg" },
-  { "slug": "stud-elegance", "name": "Stud Elegance","image": "product-1.jpg" },
-  { "slug": "drop-dangles", "name": "Drop Dangles","image": "product-3.jpg" },
-  { "slug": "chandelier-style", "name": "Chandelier Style","image": "product-2.jpg" },
-  { "slug": "huggie-hoops", "name": "Huggie Hoops","image": "product-7.jpg" },
-  { "slug": "threader-earrings", "name": "Threader Earrings","image": "product-4.jpg" }
+  { "slug": "pearl-drops", "name": "Pearl Drops", "image": "product-4.jpg", "active": true },
+  { "slug": "classic-hoops", "name": "Classic Hoops","image": "product-6.jpg", "active": true },
+  { "slug": "twisted-hoops", "name": "Twisted Hoops","image": "earrings-twisted.jpg", "active": true },
+  { "slug": "stud-elegance", "name": "Stud Elegance","image": "product-1.jpg", "active": true },
+  { "slug": "drop-dangles", "name": "Drop Dangles","image": "product-3.jpg", "active": true },
+  { "slug": "chandelier-style", "name": "Chandelier Style","image": "product-2.jpg", "active": true },
+  { "slug": "huggie-hoops", "name": "Huggie Hoops","image": "product-7.jpg", "active": true },
+  { "slug": "threader-earrings", "name": "Threader Earrings","image": "product-4.jpg", "active": true }
 ]
