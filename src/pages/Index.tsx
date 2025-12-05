@@ -112,7 +112,7 @@ const Index = () => {
           <div className="absolute left-1/2 -translate-x-1/2 -top-24">
             <img
               src={logo}
-              alt="Binni Gold logo"
+              alt="Bini Gold logo"
               className="w-32 md:w-40 drop-shadow-xl animate-fade-in"
             />
           </div>
@@ -273,7 +273,7 @@ const Index = () => {
             <div className="relative bg-background border border-border rounded-3xl shadow-xl overflow-hidden min-h-[360px]">
               <div className="absolute left-0 right-0 -top-24 -bottom-24">
                 <iframe
-                  title="Binni Gold location"
+                  title="Bini Gold location"
                   src="https://www.google.com/maps?q=42.6658607,21.1632563&z=17&output=embed"
                   className="w-full h-full pointer-events-none select-none"
                   loading="lazy"

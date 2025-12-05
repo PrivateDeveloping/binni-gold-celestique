@@ -1,8 +1,8 @@
-# Binni Gold - Luxury Jewelry E-Commerce
+# Bini Gold - Luxury Jewelry E-Commerce
 
 ## Overview
 
-Binni Gold is a premium e-commerce website showcasing luxury 14K gold jewelry collections. The application presents an elegant, minimalist interface for displaying rings, earrings, necklaces, and bracelets with a focus on high-end visual design and user experience. Built as a static marketing website with client-side routing, it emphasizes product presentation and brand aesthetics.
+Bini Gold is a premium e-commerce website showcasing luxury 14K gold jewelry collections. The application presents an elegant, minimalist interface for displaying rings, earrings, necklaces, and bracelets with a focus on high-end visual design and user experience. Built as a static marketing website with client-side routing, it emphasizes product presentation and brand aesthetics.
 
 ## User Preferences
 

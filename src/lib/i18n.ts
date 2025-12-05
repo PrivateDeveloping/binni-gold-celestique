@@ -4,8 +4,9 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
+      pageTitle: "Bini Gold - Timeless Elegance in Every Detail",
       common: {
-        brand: "BINNI GOLD",
+        brand: "BINI GOLD",
         goldLabel: "14K GOLD",
         exploreCollection: "Explore Collection →",
         discoverCollection: "Discover Collection",
@@ -43,13 +44,13 @@ const resources = {
       },
       home: {
         hero: {
-          title: "BINNI GOLD",
+          title: "BINI GOLD",
           subtitle: "Timeless Elegance in Every Detail",
           cta: "Discover Collection",
         },
         about: {
           heading: "ABOUT\nUS",
-          body1: "At Binni Gold, we believe fine jewelry is more than just an accessory - it's a timeless expression of elegance and personal style.",
+          body1: "At Bini Gold, we believe fine jewelry is more than just an accessory - it's a timeless expression of elegance and personal style.",
           body2: "Each piece in our collection is meticulously handcrafted from the finest 14k gold, blending traditional craftsmanship with contemporary design. From the intricate details to the flawless finish, every creation tells a story of dedication to excellence.",
           body3: "Whether you're searching for a special piece to mark life's meaningful moments or seeking to elevate your everyday style, our curated collection offers treasures that transcend fleeting trends.",
         },
@@ -102,7 +103,7 @@ const resources = {
         tagline: "Timeless Elegance Since 2024",
         collections: "COLLECTIONS",
         connect: "CONNECT",
-        rights: "© 2024 Binni Gold. All rights reserved. Crafted with excellence.",
+        rights: "© 2024 Bini Gold. All rights reserved. Crafted with excellence.",
       },
       notFound: {
         heading: "404",
@@ -113,8 +114,9 @@ const resources = {
   },
   sq: {
     translation: {
+      pageTitle: "Bini Gold - Elegancë e përjetshme në çdo detaj",
       common: {
-        brand: "BINNI GOLD",
+        brand: "BINI GOLD",
         goldLabel: "AR 14K",
         exploreCollection: "Shfleto Koleksionin →",
         discoverCollection: "Zbulo Koleksionin",
@@ -152,13 +154,13 @@ const resources = {
       },
       home: {
         hero: {
-          title: "BINNI GOLD",
+          title: "BINI GOLD",
           subtitle: "Elegancë e përjetshme në çdo detaj",
           cta: "Zbulo Koleksionin",
         },
         about: {
           heading: "RRETH\nNESH",
-          body1: "Te Binni Gold besojmë se bizhuteritë e mira janë më shumë sesa një aksesor – ato janë një shprehje e përhershme e elegancës dhe stilit personal.",
+          body1: "Te Bini Gold besojmë se bizhuteritë e mira janë më shumë sesa një aksesor – ato janë një shprehje e përhershme e elegancës dhe stilit personal.",
           body2: "Çdo pjesë e koleksionit tonë punohet me dorë nga ari më cilësor 14k, duke bashkuar mjeshtërinë tradicionale me dizajnin bashkëkohor. Nga detajet e imta te përfundimi i përsosur, çdo krijim tregon historinë tonë të përkushtimit ndaj përsosmërisë.",
           body3: "Qoftë për një moment të veçantë apo për të ngritur stilin e përditshëm, koleksioni ynë i kuruar ofron thesare që i rezistojnë kohës.",
         },
@@ -211,7 +213,7 @@ const resources = {
         tagline: "Elegancë e përjetshme që nga 2024",
         collections: "KOLEKSIONET",
         connect: "KONTAKT",
-        rights: "© 2024 Binni Gold. Të gjitha të drejtat e rezervuara. Punuar me përkushtim.",
+        rights: "© 2024 Bini Gold. Të gjitha të drejtat e rezervuara. Punuar me përkushtim.",
       },
       notFound: {
         heading: "404",

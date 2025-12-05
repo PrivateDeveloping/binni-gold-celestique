@@ -45,7 +45,7 @@ export function Header() {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
         <Link to="/" data-testid="link-home">
           <div className="flex items-center gap-3 hover:text-primary transition-colors">
-            <img src={logo} alt="Binni Gold logo" className="h-10 w-auto" />
+            <img src={logo} alt="Bini Gold logo" className="h-10 w-auto" />
             <h1 className="text-2xl md:text-3xl font-serif font-bold tracking-wider">
               {t("common.brand")}
             </h1>
